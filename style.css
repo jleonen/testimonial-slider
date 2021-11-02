@@ -45,6 +45,12 @@ body {
   position: relative;
 }
 
+.main-bg {
+  /* box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.281); */
+
+  box-shadow: 0 9px 25px #777;
+}
+
 .test-bg {
   position: absolute;
   z-index: -1;
@@ -54,4 +60,14 @@ body {
   right: 430px;
   height: 650px;
   width: 700px;
+}
+
+.arrows {
+  display: flex;
+  gap: 33px;
+  background-color: white;
+  width: 60px;
+  padding: 10px;
+  border-radius: 20px;
+  transform: translate(90px, -26px);
 }
