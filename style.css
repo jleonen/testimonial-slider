@@ -78,3 +78,7 @@ body {
   background-color: none;
   cursor: pointer;
 }
+
+.hidden {
+  display: none;
+}
