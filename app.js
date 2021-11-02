@@ -1,7 +1,7 @@
 "use strict";
 
 const testimonials = document.querySelectorAll(".testimonial");
-const btnLeft = document.querySelector(".btn--left");
+const btnLeft = document.querySelectorAll(".btn--left");
 const btnRight = document.querySelectorAll(".btn--right");
 
 let currentSlide = 0;
@@ -29,23 +29,24 @@ const nextSlide = function () {
   goToSlide(currentSlide);
 };
 
-//   const prevSlide = function () {
-//     if (currentSlide === 0) {
-//       currentSlide = maxSlides - 1;
-//     } else {
-//       currentSlide--;
-//     }
+const prevSlide = function () {
+  if (currentSlide === 0) {
+    currentSlide = maxSlides - 1;
+  } else {
+    currentSlide--;
+  }
+  testimonials.forEach((item) => item.classList.add("hidden"));
+  goToSlide(currentSlide);
+};
 
-//     goToSlide(currentSlide);
-//   };
-
-// const init = function () {
-//   goToSlide(0);
-// };
-// init();
+const init = function () {
+  goToSlide(0);
+};
+init();
 btnRight.forEach((item, index) => item.addEventListener("click", nextSlide));
+btnLeft.forEach((item, index) => item.addEventListener("click", prevSlide));
 
 // btnRight.addEventListener("click", nextSlide);
 //   btnLeft.addEventListener("click", prevSlide);
 
-goToSlide(0);
+// goToSlide(0);
