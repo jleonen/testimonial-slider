@@ -9,22 +9,24 @@ let currentSlide = 0;
 const maxSlides = testimonials.length;
 
 const goToSlide = function (slide) {
+  let next = slide + 1;
+
   testimonials[slide].classList.remove("hidden");
-  // testimonials[slide].style.transform = `translateX(${0}%)`;
+
+  // currentSlide === maxSlides - 1 &&
+  // testimonials[next].classList.remove("hidden");
+
+  // testimonials[slide - 1].style.transform = `translateX(${-100}%)`;
+  // testimonials[slide + 2].style.transform = `translateX(${-100}%)`;
+  console.log(currentSlide);
+
   // testimonials[slide + 1].style.transform = `translateX(${100}%)`;
   // slider.style.transform = `translateX(${0}%)`;
-  // testimonials.forEach(
-  //   (slides, index) =>
-  //     (slides.style.transform = `translateX(${100 * (index - slides)}%)`)
-  // );
+  testimonials.forEach(
+    (slides, index) =>
+      (slides.style.transform = `translateX(${100 * (slide - index)}%)`)
+  );
 };
-
-//   const goToSlide = function (slide) {
-//     testimonials.forEach(
-//       (slide, index) =>
-//         (slide.style.transform = `translateX(${100 * (index - slide)}%)`)
-//     );
-//   };
 
 //Go to next slide
 const nextSlide = function () {
@@ -33,8 +35,22 @@ const nextSlide = function () {
   } else {
     currentSlide++;
   }
-
+  // testimonials.forEach(
+  //   (item) => (item.style.transform = `translateX(${-100}%)`)
+  // );
+  let next = currentSlide + 1;
+  console.log(next);
+  // testimonials[currentSlide].style.transform = `translateX(${0}%)`;
   testimonials.forEach((item) => item.classList.add("hidden"));
+  if (currentSlide < maxSlides - 1) {
+    testimonials[currentSlide + 1].classList.remove("hidden");
+  } else {
+    console.log("max limit");
+    testimonials[0].classList.remove("hidden");
+  }
+  // testimonials[next].classList.remove("hidden");
+  // testimonials[2].classList.remove("hidden");
+  // testimonials[2].style.transform = `translateX(${-100}%)`;
   goToSlide(currentSlide);
 };
 
@@ -45,13 +61,15 @@ const prevSlide = function () {
   } else {
     currentSlide--;
   }
-  testimonials.forEach((item) => item.classList.add("hidden"));
+  // testimonials.forEach((item) => item.classList.add("hidden"));
   goToSlide(currentSlide);
 };
 
 //go to first slide upon loading the page
 const init = function () {
   goToSlide(0);
+  testimonials[1].classList.remove("hidden");
+  // testimonials[1].style.transform = `translateX(${-100}%)`;
 };
 init();
 
