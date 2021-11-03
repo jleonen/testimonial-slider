@@ -24,7 +24,7 @@ const goToSlide = function (slide) {
   // slider.style.transform = `translateX(${0}%)`;
   testimonials.forEach(
     (slides, index) =>
-      (slides.style.transform = `translateX(${100 * (slide - index)}%)`)
+      (slides.style.transform = `translateX(${200 * (slide - index)}%)`)
   );
 };
 
@@ -61,14 +61,21 @@ const prevSlide = function () {
   } else {
     currentSlide--;
   }
-  // testimonials.forEach((item) => item.classList.add("hidden"));
+  testimonials.forEach((item) => item.classList.add("hidden"));
+  if (currentSlide === 2) testimonials[1].classList.remove("hidden");
+  if (currentSlide < maxSlides && currentSlide !== 0) {
+    testimonials[currentSlide - 1].classList.remove("hidden");
+  } else {
+    console.log("max limit");
+    testimonials[maxSlides - 1].classList.remove("hidden");
+  }
   goToSlide(currentSlide);
 };
 
 //go to first slide upon loading the page
 const init = function () {
   goToSlide(0);
-  testimonials[1].classList.remove("hidden");
+  // testimonials[2].classList.remove("hidden");
   // testimonials[1].style.transform = `translateX(${-100}%)`;
 };
 init();

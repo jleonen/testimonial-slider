@@ -30,6 +30,10 @@ body {
   color: rgba(128, 128, 128, 0.61);
 }
 
+.slider .testimonial {
+  position: absolute;
+}
+
 .testimonial {
   display: grid;
   grid-template-columns: 0.5fr 1fr;
