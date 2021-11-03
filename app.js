@@ -26,6 +26,7 @@ const goToSlide = function (slide) {
 //     );
 //   };
 
+//Go to next slide
 const nextSlide = function () {
   if (currentSlide + 1 === maxSlides) {
     currentSlide = 0;
@@ -37,6 +38,7 @@ const nextSlide = function () {
   goToSlide(currentSlide);
 };
 
+//go to previous slide
 const prevSlide = function () {
   if (currentSlide === 0) {
     currentSlide = maxSlides - 1;
@@ -47,13 +49,17 @@ const prevSlide = function () {
   goToSlide(currentSlide);
 };
 
+//go to first slide upon loading the page
 const init = function () {
   goToSlide(0);
 };
 init();
+
+//event listeners for buttons
 btnRight.forEach((item) => item.addEventListener("click", nextSlide));
 btnLeft.forEach((item) => item.addEventListener("click", prevSlide));
 
+//event listener for keypress
 document.addEventListener("keydown", function (e) {
   if (e.key === "ArrowLeft") prevSlide();
   e.key === "ArrowRight" && nextSlide();
