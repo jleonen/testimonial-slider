@@ -51,8 +51,8 @@ const init = function () {
   goToSlide(0);
 };
 init();
-btnRight.forEach((item, index) => item.addEventListener("click", nextSlide));
-btnLeft.forEach((item, index) => item.addEventListener("click", prevSlide));
+btnRight.forEach((item) => item.addEventListener("click", nextSlide));
+btnLeft.forEach((item) => item.addEventListener("click", prevSlide));
 
 document.addEventListener("keydown", function (e) {
   if (e.key === "ArrowLeft") prevSlide();
