@@ -15,11 +15,15 @@ body {
 .test-description {
   display: flex;
   flex-direction: column;
+  position: absolute;
+  z-index: 1;
 }
 
 .test-description blockquote {
   font-size: 30px;
   font-weight: 300;
+  width: 600px;
+  margin-left: 0px;
 }
 
 .name {
@@ -37,8 +41,9 @@ body {
 .testimonial {
   background-image: url("/images/pattern-quotes.svg");
   background-repeat: no-repeat;
-  background-position-x: 120px;
+  background-position-x: 80px;
   background-position-y: 125px;
+  column-gap: 238px;
   display: grid;
   grid-template-columns: 0.5fr 1fr;
   /* display: flex; */
@@ -64,6 +69,7 @@ body {
   /* background-image: url("/images/pattern-bg.svg"); */
   background-repeat: none;
   position: relative;
+  grid-column: 2;
 }
 
 /* for test testimonial */
@@ -84,14 +90,9 @@ body {
   transform: translateY(-60px);
   top: 0px;
   bottom: 0px;
-  right: 10px;
+  right: -86px;
   height: 650px;
   width: 700px;
-}
-
-.test-quote {
-  width: 600px;
-  padding-left: 0px;
 }
 
 .arrows {
