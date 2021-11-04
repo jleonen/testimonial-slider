@@ -171,9 +171,118 @@ body {
   }
 }
 
-@media (max-width: 470px) {
+@media (max-width: 1360px) {
   .testimonial {
+    margin-left: 0px;
+    column-gap: 0px;
+  }
+
+  .test-description {
+    right: 540px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .test-description {
+    position: initial;
+  }
+
+  .main-bg {
+    width: 440px;
+  }
+
+  .test-bg {
+    right: -2px;
+    height: 550px;
+    width: 620px;
+  }
+}
+
+@media (max-width: 1060px) {
+  .testimonial blockquote {
+    width: 500px;
+  }
+
+  .test-bg {
+    right: 23px;
+    height: 543px;
+    width: 620px;
+    transform: translateY(-99px);
+  }
+}
+
+@media (max-width: 1000px) {
+  .testimonial {
+    background-position-y: 40px;
+    background-size: 74px;
     left: 0px;
+  }
+  .testimonial blockquote {
+    width: 400px;
+  }
+
+  .main-bg {
+    width: 350px;
+  }
+
+  .test-bg {
+    height: 449px;
+    width: 620px;
+    transform: translateY(-64px);
+  }
+}
+
+@media (max-width: 860px) {
+  .slider {
+    display: flex;
+    justify-content: center;
+  }
+
+  .testimonial {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 50px;
+  }
+
+  .testimonial blockquote {
+    width: 650px;
+  }
+
+  .testimonial .testing-quote {
+    width: 650px;
+    font-size: 25px;
+  }
+
+  .test-bg {
+    transform: translate(97px, -62px);
+  }
+
+  .testing-img {
+    height: 350px;
+  }
+}
+
+@media (max-width: 720px) {
+  .testimonial blockquote {
+    width: 450px;
+    font-size: 23px;
+  }
+
+  .testimonial .testing-quote {
+    width: 480px;
+    font-size: 23px;
+  }
+}
+
+@media (max-width: 450px) {
+  .testimonial blockquote {
+    font-size: 20px;
+    width: 400px;
+  }
+
+  .testimonial .testing-quote {
+    width: 400px;
+    font-size: 15px;
   }
 }
 
@@ -189,7 +298,7 @@ body {
   }
 
   .test-info {
-    font-size: 20px;
+    font-size: 15px;
   }
 
   .main-bg {
@@ -201,6 +310,15 @@ body {
     height: 320px;
     right: -50px;
     transform: translate(-13px, -54px);
+  }
+
+  .testing-img {
+    height: 250px;
+  }
+
+  .testimonial .testing-quote {
+    width: 350px;
+    font-size: 15px;
   }
 }
 
