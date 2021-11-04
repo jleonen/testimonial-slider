@@ -128,10 +128,14 @@ body {
     flex-direction: column-reverse;
     align-items: flex-start;
     left: 50px;
+    background-position-x: 125px;
+    background-position-y: 380px;
+    background-size: 80px;
+    gap: 50px;
   }
 
   .testimonial blockquote {
-    font-size: 25px;
+    font-size: 23px;
     width: 400px;
     text-align: center;
   }
