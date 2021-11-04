@@ -11,13 +11,6 @@ const maxSlides = testimonials.length;
 const goToSlide = function (slide) {
   testimonials[slide].classList.remove("hidden");
 
-  // currentSlide === maxSlides - 1 &&
-  // testimonials[next].classList.remove("hidden");
-
-  // testimonials[slide - 1].style.transform = `translateX(${-100}%)`;
-  // testimonials[slide + 2].style.transform = `translateX(${-100}%)`;
-  // console.log(currentSlide);
-
   // testimonials[slide + 1].style.transform = `translateX(${100}%)`;
   // slider.style.transform = `translateX(${0}%)`;
   testimonials.forEach(
@@ -34,14 +27,13 @@ const nextSlide = function () {
     currentSlide++;
   }
 
-  // testimonials[currentSlide].style.transform = `translateX(${0}%)`;
   testimonials.forEach((item) => item.classList.add("hidden"));
-  if (currentSlide < maxSlides - 1) {
-    testimonials[currentSlide + 1].classList.remove("hidden");
-  } else {
-    // console.log("max limit");
-    testimonials[0].classList.remove("hidden");
-  }
+  // if (currentSlide < maxSlides - 1) {
+  //   testimonials[currentSlide + 1].classList.remove("hidden");
+  // } else {
+  //   // console.log("max limit");
+  //   testimonials[0].classList.remove("hidden");
+  // }
 
   goToSlide(currentSlide);
 };
@@ -55,12 +47,12 @@ const prevSlide = function () {
   }
   testimonials.forEach((item) => item.classList.add("hidden"));
 
-  if (currentSlide < maxSlides && currentSlide !== 0) {
-    testimonials[currentSlide - 1].classList.remove("hidden");
-  } else {
-    //console.log("max limit");
-    testimonials[maxSlides - 1].classList.remove("hidden");
-  }
+  // if (currentSlide < maxSlides && currentSlide !== 0) {
+  //   testimonials[currentSlide - 1].classList.remove("hidden");
+  // } else {
+  //   //console.log("max limit");
+  //   testimonials[maxSlides - 1].classList.remove("hidden");
+  // }
   goToSlide(currentSlide);
 };
 
