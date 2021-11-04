@@ -115,3 +115,53 @@ body {
   opacity: 0;
   /* display: none; */
 }
+
+@media (max-width: 500px) {
+  .slider {
+    display: flex;
+    align-items: center;
+  }
+  .testimonial {
+    margin-left: 0px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    left: 50px;
+  }
+
+  .testimonial blockquote {
+    font-size: 25px;
+    width: 400px;
+    text-align: center;
+  }
+
+  .test-description {
+    position: relative;
+  }
+
+  .test-info {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+    text-align: center;
+  }
+
+  .test-img {
+    left: 30px;
+  }
+
+  .main-bg {
+    width: 300px;
+  }
+
+  .test-bg {
+    width: 400px;
+    height: 400px;
+    right: -50px;
+  }
+
+  .testing-img {
+    height: 300px;
+  }
+}
