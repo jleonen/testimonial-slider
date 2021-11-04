@@ -157,8 +157,9 @@ body {
 
   .test-bg {
     width: 400px;
-    height: 400px;
+    height: 375px;
     right: -50px;
+    transform: translateY(-45px);
   }
 
   .testing-img {
