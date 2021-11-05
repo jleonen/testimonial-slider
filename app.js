@@ -10,21 +10,7 @@ const maxSlides = testimonials.length;
 
 const goToSlide = function (slide) {
   testimonials[slide].classList.remove("hidden");
-  // testimonials[slide].style.transform = `translateX(${0}%)`;
-  // testimonials[slide + 1].style.transform = `translateX(${100}%)`;
-  // slider.style.transform = `translateX(${0}%)`;
-  // testimonials.forEach(
-  //   (slides, index) =>
-  //     (slides.style.transform = `translateX(${100 * (index - slides)}%)`)
-  // );
 };
-
-//   const goToSlide = function (slide) {
-//     testimonials.forEach(
-//       (slide, index) =>
-//         (slide.style.transform = `translateX(${100 * (index - slide)}%)`)
-//     );
-//   };
 
 //Go to next slide
 const nextSlide = function () {
