@@ -147,7 +147,7 @@ body {
 
 @media (max-width: 1060px) {
   .testimonial {
-    background-position-y: 40px;
+    background-position-y: 391px;
     background-size: 74px;
     left: 0px;
   }
@@ -321,39 +321,24 @@ body {
     width: 300px;
     height: 320px;
     right: -50px;
-    transform: translate(-13px, -54px);
+    transform: translate(-13px, -53px);
   }
 
   .testing-img {
     height: 250px;
   }
-
-  .testimonial .testing-quote {
-    width: 300px;
-    font-size: 15px;
-  }
 }
 
 @media (max-width: 360px) {
-  .testimonial blockquote {
-    width: 300px;
-  }
-
   .testimonial .testing-quote {
     width: 280px;
     font-size: 15px;
   }
-}
 
-@media (max-width: 320px) {
-  .testimonial blockquote {
-    width: 280px;
-  }
   .main-bg {
     width: 220px;
   }
   .test-bg {
     height: 295px;
-    transform: translate(-13px, -53px);
   }
 }
